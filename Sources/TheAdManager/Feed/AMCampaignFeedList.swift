@@ -31,38 +31,68 @@ public struct AMCampaignFeedList: View {
     private let viewModel = AMCampaignFeedListViewModel()
     let posts: [CampaignPost]
     private var listLayout = Array(repeating: GridItem(.flexible(), spacing: 10), count: 1)
+    var backgroundColor: Color = Color(UIColor.systemBackground)
+    var foregroundColor: Color = Color.primary
     
-    public init(posts: [CampaignPost]) {
+    public init(posts: [CampaignPost],
+                backgroundColor: Color = Color(UIColor.systemBackground),
+                foregroundColor: Color = Color.primary) {
         self.posts = posts
+        self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
     }
     
     public var body: some View {
-        ScrollView {
-            LazyVGrid(columns: listLayout, alignment: .leading) {
-                Text("Currently Running").padding(.horizontal)
-                ForEach(viewModel.posts.filter { $0.isValid && $0.isCurrentlyRunning }) { post in
-                    NavigationLink.init(destination: AMStatsDetailView(campaignInsights: CampaignInsights.insights.filter { $0.id == post.id }.first!)) {
-                        AMPostFeedCell(campaignPost: post).foregroundColor(Color.primary)
-                    }
-                    Divider()
-                }
-                Text("Upcoming").padding(.horizontal)
-                ForEach(viewModel.posts.filter { $0.isValid && !$0.isCurrentlyRunning }) { post in
-                    NavigationLink.init(destination: AMStatsDetailView(campaignInsights: CampaignInsights.insights.filter { $0.id == post.id }.first!)) {
-                        AMPostFeedCell(campaignPost: post).foregroundColor(Color.primary)
-                    }
-                    Divider()
-                }
-                Text("Past Ignited Posts").padding(.horizontal)
-                ForEach(viewModel.posts.filter { !$0.isValid }) { post in
-                    NavigationLink.init(destination: AMStatsDetailView(campaignInsights: CampaignInsights.insights.filter { $0.id == post.id }.first!)) {
-                        AMPostFeedCell(campaignPost: post).foregroundColor(Color.primary)
-                    }
-                    Divider()
+        VStack {
+            if viewModel.posts.isEmpty {
+                HStack {
+                    Image("ignite_button")
+                        .imageScale(.medium)
+                        .foregroundColor(foregroundColor)
+                    Text("There are no ignited posts yet. Go ahead and make your posts visible to all!")
+                        .foregroundColor(foregroundColor)
+                }.padding()
+            } else {
+                ScrollView {
+                    LazyVGrid(columns: listLayout, alignment: .leading) {
+                        if viewModel.posts.filter { $0.isValid && $0.isCurrentlyRunning }.count > 0 {
+                            Text("Currently Running")
+                                .foregroundColor(foregroundColor)
+                                .padding()
+                            ForEach(viewModel.posts.filter { $0.isValid && $0.isCurrentlyRunning }) { post in
+                                NavigationLink.init(destination: AMStatsDetailView(campaignInsights: CampaignInsights.insights.filter { $0.id == post.id }.first!)) {
+                                    AMPostFeedCell(campaignPost: post)
+                                }
+                                Divider()
+                            }
+                        }
+                        if viewModel.posts.filter { $0.isValid && !$0.isCurrentlyRunning }.count > 0 {
+                            Text("Upcoming")
+                                .foregroundColor(foregroundColor)
+                                .padding()
+                            ForEach(viewModel.posts.filter { $0.isValid && !$0.isCurrentlyRunning }) { post in
+                                NavigationLink.init(destination: AMStatsDetailView(campaignInsights: CampaignInsights.insights.filter { $0.id == post.id }.first!)) {
+                                    AMPostFeedCell(campaignPost: post)
+                                }
+                                Divider()
+                            }
+                        }
+                        if viewModel.posts.filter { !$0.isValid }.count > 0 {
+                            Text("Past Ignited Posts")
+                                .foregroundColor(foregroundColor)
+                                .padding()
+                            ForEach(viewModel.posts.filter { !$0.isValid }) { post in
+                                NavigationLink.init(destination: AMStatsDetailView(campaignInsights: CampaignInsights.insights.filter { $0.id == post.id }.first!)) {
+                                    AMPostFeedCell(campaignPost: post)
+                                }
+                                Divider()
+                            }
+                        }
+                    }.foregroundColor(foregroundColor)
                 }
             }
-        }
-        .navigationTitle("My Ignited Posts")
+        }.navigationTitle("My Ignited Posts")
+        .background(backgroundColor)
     }
 }
 
