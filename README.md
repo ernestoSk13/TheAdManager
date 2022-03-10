@@ -1,2 +1,3 @@
 # TheAdManager
-A manager made to handle tumblr ads
+
+A description of this package.

@@ -1,0 +1,46 @@
+{
+    "id": "1",
+    "posts": [
+        {
+            "id": "DPMS100210",
+            "image": "mandalorian",
+            "postTitle": "The Mandalorian: Season 2",
+            "budget": 205000.00,
+            "startedDate": "20-02-2022",
+            "endingDate": "25-02-2022",
+            "impressions": 300000,
+            "adIdentifier": "DPMS100210"
+        },
+        {
+            "id": "DPWV100210",
+            "image": "wandavision",
+            "postTitle": "WandaVision: Season 1",
+            "budget": 350000.00,
+            "startedDate": "20-01-2022",
+            "endingDate": "25-01-2022",
+            "impressions": 100000,
+            "adIdentifier": "DPWV100210"
+        },
+        {
+            "id": "DPL100210",
+            "image": "loki",
+            "postTitle": "Loki: Season 1",
+            "budget": 45000.00,
+            "startedDate": "05-03-2022",
+            "endingDate": "10-03-2022",
+            "impressions": 70000,
+            "adIdentifier": "DPL100210"
+        },
+        {
+            "id": "DPWI100210",
+            "image": "whatif",
+            "postTitle": "What If: Season 2",
+            "budget": 900000.00,
+            "startedDate": "10-04-2022",
+            "endingDate": "10-05-2022",
+            "impressions": 0,
+            "adIdentifier": "DPWI100210"
+        }
+        
+    ]
+}

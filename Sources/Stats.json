@@ -1,0 +1,181 @@
+[
+    {
+        "id": "DPMS100210",
+        "stats": [
+            {
+                "date": "20-02-2022",
+                "totalImpressions": 12000,
+                "clicks": 300,
+                "likes": 400,
+                "reblogs": 50,
+                "replies": 250,
+                "follows": 90,
+                "shares": 20
+            },
+            {
+                "date": "21-02-2022",
+                "totalImpressions": 10500,
+                "clicks": 150,
+                "likes": 300,
+                "reblogs": 20,
+                "replies": 100,
+                "follows": 70,
+                "shares": 10
+            },
+            {
+                "date": "22-02-2022",
+                "totalImpressions": 11200,
+                "clicks": 200,
+                "likes": 400,
+                "reblogs": 70,
+                "replies": 90,
+                "follows": 100,
+                "shares": 100
+            },
+            {
+                "date": "23-02-2022",
+                "totalImpressions": 12000,
+                "clicks": 123,
+                "likes": 427,
+                "reblogs": 51,
+                "replies": 289,
+                "follows": 120,
+                "shares": 102
+            },
+            {
+                "date": "24-02-2022",
+                "totalImpressions": 30000,
+                "clicks": 10000,
+                "likes": 12000,
+                "reblogs": 500,
+                "replies": 3250,
+                "follows": 499,
+                "shares": 1200
+            },
+            {
+                "date": "25-02-2022",
+                "totalImpressions": 24300,
+                "clicks": 8000,
+                "likes": 12565,
+                "reblogs": 700,
+                "replies": 7845,
+                "follows": 378,
+                "shares": 1000
+            }
+        ]
+    },
+    {
+        "id": "DPWV100210",
+        "stats": [
+            {
+                "date": "20-01-2022",
+                "totalImpressions": 12000,
+                "clicks": 300,
+                "likes": 400,
+                "reblogs": 50,
+                "replies": 250,
+                "follows": 90,
+                "shares": 20
+            },
+            {
+                "date": "21-01-2022",
+                "totalImpressions": 10500,
+                "clicks": 150,
+                "likes": 300,
+                "reblogs": 20,
+                "replies": 100,
+                "follows": 70,
+                "shares": 10
+            },
+            {
+                "date": "22-01-2022",
+                "totalImpressions": 11200,
+                "clicks": 200,
+                "likes": 400,
+                "reblogs": 70,
+                "replies": 90,
+                "follows": 100,
+                "shares": 100
+            },
+            {
+                "date": "23-01-2022",
+                "totalImpressions": 12000,
+                "clicks": 123,
+                "likes": 427,
+                "reblogs": 51,
+                "replies": 289,
+                "follows": 120,
+                "shares": 102
+            },
+            {
+                "date": "24-01-2022",
+                "totalImpressions": 30000,
+                "clicks": 10000,
+                "likes": 12000,
+                "reblogs": 500,
+                "replies": 3250,
+                "follows": 499,
+                "shares": 1200
+            },
+            {
+                "date": "25-01-2022",
+                "totalImpressions": 24300,
+                "clicks": 8000,
+                "likes": 12565,
+                "reblogs": 700,
+                "replies": 7845,
+                "follows": 378,
+                "shares": 1000
+            }
+        ]
+    },
+    {
+        "id": "DPL100210",
+        "stats": [
+            {
+                "date": "05-03-2022",
+                "totalImpressions": 12000,
+                "clicks": 300,
+                "likes": 400,
+                "reblogs": 50,
+                "replies": 250,
+                "follows": 90,
+                "shares": 20
+            },
+            {
+                "date": "06-03-2022",
+                "totalImpressions": 10500,
+                "clicks": 150,
+                "likes": 300,
+                "reblogs": 20,
+                "replies": 100,
+                "follows": 70,
+                "shares": 10
+            },
+            {
+                "date": "07-03-2022",
+                "totalImpressions": 11200,
+                "clicks": 200,
+                "likes": 400,
+                "reblogs": 70,
+                "replies": 90,
+                "follows": 100,
+                "shares": 100
+            },
+            {
+                "date": "08-03-2022",
+                "totalImpressions": 12000,
+                "clicks": 123,
+                "likes": 427,
+                "reblogs": 51,
+                "replies": 289,
+                "follows": 120,
+                "shares": 102
+            }
+        ]
+    },
+    {
+        "id": "DPWI100210",
+        "stats": []
+    }
+]
